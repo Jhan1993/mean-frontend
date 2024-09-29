@@ -1,0 +1,30 @@
+<h2>Lista de Usuarios</h2>
+
+<!-- Botón de salir -->
+<button (click)="logout()">Salir</button>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Tipo de Documento</th>
+      <th>Documento</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Correo</th>
+      <th>Contraseña</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <td><input [(ngModel)]="usuario.tipoDocumento" /></td>
+      <td><input [(ngModel)]="usuario.documento" /></td>
+      <td><input [(ngModel)]="usuario.nombre" /></td>
+      <td><input [(ngModel)]="usuario.apellido" /></td>
+      <td><input [(ngModel)]="usuario.correo" /></td>
+      <td><input [(ngModel)]="usuario.password" type="password" /></td>
+      <td><button (click)="actualizarUsuario(usuario)">Actualizar</button></td>
+    </tr>
+  </tbody>
+</table>
+

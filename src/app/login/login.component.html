@@ -1,0 +1,13 @@
+<h2>Iniciar Sesión</h2>
+<form (submit)="onLogin()">
+  <label>Correo</label>
+  <input type="email" [(ngModel)]="correo" name="correo" required>
+
+  <label>Contraseña</label>
+  <input type="password" [(ngModel)]="password" name="password" required>
+
+  <button type="submit">Iniciar Sesión</button>
+</form>
+
+<p>¿No tienes una cuenta?</p>
+<button (click)="navigateToRegister()">Registrar</button>

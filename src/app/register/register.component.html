@@ -1,0 +1,22 @@
+<h2>Registro de Usuario</h2>
+<form (submit)="onRegister()">
+  <label>Tipo de Documento</label>
+  <input type="text" [(ngModel)]="tipoDocumento" name="tipoDocumento" required>
+
+  <label>Documento</label>
+  <input type="text" [(ngModel)]="documento" name="documento" required>
+
+  <label>Nombre</label>
+  <input type="text" [(ngModel)]="nombre" name="nombre" required>
+
+  <label>Apellido</label>
+  <input type="text" [(ngModel)]="apellido" name="apellido" required>
+
+  <label>Correo</label>
+  <input type="email" [(ngModel)]="correo" name="correo" required>
+
+  <label>Contraseña</label>
+  <input type="password" [(ngModel)]="password" name="password" required>
+  
+  <button type="submit">Registrar</button>
+</form>
